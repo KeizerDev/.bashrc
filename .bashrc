@@ -108,3 +108,13 @@ extract () {
       echo "'$1' is not a valid file!"
   fi
 }
+
+# Runs a ls immediately when you're inside a file. 
+cl() {
+ if [ -d $1 ] ; then
+	cd $1
+	ls 
+ else
+	echo "'$1' not a dir..."
+ fi
+}
